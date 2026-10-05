@@ -1,0 +1,8 @@
+{
+  "duplicate_rows": 605,
+  "queries_with_tied_top1": {
+    "42": 0.014,
+    "43": 0.01,
+    "44": 0.01
+  }
+}

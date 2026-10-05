@@ -1,0 +1,6 @@
+{
+  "model": "BAAI/bge-small-en-v1.5",
+  "corpus": "DBpedia (README dataset), first 1,500 texts",
+  "mean_pairwise_cos": 0.4254,
+  "norm_of_mean": 0.6525
+}

@@ -1,0 +1,9 @@
+{
+  "centred_identical_id_set_k10_per_seed": {
+    "42": 0.935,
+    "43": 0.927,
+    "44": 0.929
+  },
+  "mean": 0.9303,
+  "uncentred_reference": "results/agree_medcpt-ncbi-100k_4bit.json k=10"
+}
