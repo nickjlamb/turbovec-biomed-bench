@@ -1,0 +1,7 @@
+turbovec==1.1.1
+faiss-cpu
+numpy
+pyarrow
+sentence-transformers
+transformers
+torch
