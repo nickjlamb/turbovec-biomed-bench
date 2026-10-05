@@ -1,0 +1,5 @@
+emb/
+*.npz
+pubmed.jsonl
+__pycache__/
+*.log
