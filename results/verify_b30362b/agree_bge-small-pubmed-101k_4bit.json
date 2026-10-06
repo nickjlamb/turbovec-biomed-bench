@@ -1,0 +1,44 @@
+{
+  "k=1": {
+    "identical_id_set": 0.9983,
+    "identical_id_set_per_seed": [
+      1.0,
+      0.995,
+      1.0
+    ],
+    "identical_score_set_tol_1e6": 1.0,
+    "recall_k_at_k_staged": 0.9353,
+    "recall_k_at_k_full_scan": 0.9353,
+    "ids_shared": 0.9983,
+    "true_nn_in_topk_staged": 0.9353,
+    "true_nn_in_topk_full_scan": 0.9353
+  },
+  "k=10": {
+    "identical_id_set": 0.966,
+    "identical_id_set_per_seed": [
+      0.957,
+      0.965,
+      0.976
+    ],
+    "identical_score_set_tol_1e6": 0.9683,
+    "recall_k_at_k_staged": 0.9345,
+    "recall_k_at_k_full_scan": 0.9361,
+    "ids_shared": 0.9959,
+    "true_nn_in_topk_staged": 1.0,
+    "true_nn_in_topk_full_scan": 1.0
+  },
+  "k=100": {
+    "identical_id_set": 0.7027,
+    "identical_id_set_per_seed": [
+      0.698,
+      0.695,
+      0.715
+    ],
+    "identical_score_set_tol_1e6": 0.704,
+    "recall_k_at_k_staged": 0.9449,
+    "recall_k_at_k_full_scan": 0.9463,
+    "ids_shared": 0.9951,
+    "true_nn_in_topk_staged": 1.0,
+    "true_nn_in_topk_full_scan": 1.0
+  }
+}
