@@ -42,6 +42,17 @@ Measured at k=64, where the staged search is close to a full scan:
 - **Duplicates.** 605 of the 101K MedCPT rows are exact duplicates. They are mostly errata and corrections notices, non-English records and identically titled letters. They give 1.0–1.4% of queries a tied top-1, so all hit tests here are tie-aware.
 - **Small-model control.** On 11K PubMed abstracts, bge-small-en-v1.5 and its biomedical fine-tune MedEmbed-small behave almost identically. bge-small is also anisotropic on DBpedia text (mean pairwise cos 0.43).
 
+### Follow-up: bge-small on the same articles
+
+At the maintainer's request ([turbovec#562](https://github.com/RyanCodrai/turbovec/issues/562)), I embedded the same 101K PubMed articles with BAAI/bge-small-en-v1.5 (d=384). I used the title + abstract text NCBI fed MedCPT, truncated to 256 tokens. TQ+ index, staged vs whole-index scan:
+
+| corpus | bits | identical ids, k=1 / 10 / 100 | recall10@10, staged / full |
+|---|---|---|---|
+| bge-small d=384 | 4 | 99.2% / 75.6% / 32.2% | 0.917 / 0.936 |
+| bge-small d=384 | 2 | 99.2% / 69.0% / 47.5% | 0.767 / 0.776 |
+
+Scripts: `embed_bge_medcpt_slice.py` (set `MEDCPT_DIR` to the folder holding NCBI's `pubmed_chunk_{30,36}.json`) and `sign_depth.py`, an approximation of the sign-bit depth statistic that uses a random rotation, so read its numbers as relative only. Results: `results/agree_bge-small-pubmed-101k_*bit.json` and `results/sign_depth_*.json`.
+
 Raw numbers are in [`results/`](results/).
 
 ## Method
